@@ -1,0 +1,56 @@
+﻿@model LifeSure.WebApp.Models.DataModels.Tbl_FAQ
+@{
+    ViewBag.Title = "Edit Faq";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    table {
+        table-layout: fixed;
+        word-break: break-word;
+    }
+
+    td, th {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        max-width: 180px;
+        white-space: normal;
+    }
+
+    .offer-link {
+        display: inline-block;
+        max-width: 160px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+</style>
+
+<h2 style="font-family:'Space Mono',monospace;font-size:1.5rem;margin-bottom:1.5rem;color:#2e2e2e;">Edit FAQ</h2>
+
+<form action="/Admin/EditFaq" method="post" style="max-width:480px;margin:0 auto;background:#f8f5e4;border:2px solid #b7eac5;border-radius:14px;padding:2rem 1.5rem;box-shadow:0 2px 8px #b7eac540;">
+    <input type="hidden" name="OfferId" value="@(Model != null ? Model.FAQId : 0)" />
+    <div style="margin-bottom:1.2rem;">
+        <label for="Question" style="display:block;font-family:'Space Mono',monospace;font-size:1.08rem;color:#2e2e2e;margin-bottom:0.4rem;">Question</label>
+        <input type="text" id="Question" name="Question" value="@(Model != null ? Model.Question : "")" required
+               style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;"
+               placeholder="Enter FAQ question" />
+    </div>
+    <div style="margin-bottom:1.2rem;">
+        <label for="Answer" style="display:block;font-family:'Space Mono',monospace;font-size:1.08rem;color:#2e2e2e;margin-bottom:0.4rem;">Answer</label>
+        <textarea id="Answer" name="Answer" rows="3" required
+                  style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;resize:vertical;"
+                  placeholder="Enter FAQ answer">@((Model != null ? Model.Answer : ""))</textarea>
+    </div>
+    <div style="display:flex;justify-content:flex-end;">
+        <button type="submit"
+                style="background:#b7eac5;color:#2e2e2e;border:none;padding:0.7rem 1.6rem;border-radius:10px;font-family:'Space Mono',monospace;font-size:1.08rem;font-weight:bold;letter-spacing:1px;cursor:pointer;box-shadow:0 2px 8px #b7eac540;transition:background 0.2s, color 0.2s;">
+            Update FAQ
+        </button>
+    </div>
+</form>

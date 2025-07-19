@@ -1,0 +1,213 @@
+﻿@model LifeSure.WebApp.Models.DataModels.Tbl_FAQ
+@{
+    ViewBag.Title = "Add Faq";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    table {
+        table-layout: fixed;
+        word-break: break-word;
+    }
+
+    td, th {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        max-width: 180px;
+        white-space: normal;
+    }
+
+    .offer-link {
+        display: inline-block;
+        max-width: 160px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+
+    .faq-item {
+        background: #fffbe9;
+        border: 1.5px solid #b7eac5;
+        border-radius: 8px;
+        padding: 1rem;
+        margin-bottom: 1rem;
+    }
+
+    .faq-number {
+        background: #b7eac5;
+        color: #2e2e2e;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        margin-bottom: 0.5rem;
+    }
+</style>
+
+<h2 style="font-family:'Space Mono',monospace;font-size:1.5rem;margin-bottom:1.5rem;color:#2e2e2e;">Add New FAQs with AI</h2>
+
+<form id="faqForm" action="/Admin/AddFaq" method="post" style="max-width:800px;margin:0 auto;background:#f8f5e4;border:2px solid #b7eac5;border-radius:14px;padding:2rem 1.5rem;box-shadow:0 2px 8px #b7eac540;">
+    
+    <!-- Prompt Input -->
+    <div style="margin-bottom:1.5rem;">
+        <label for="prompt" style="display:block;font-family:'Space Mono',monospace;font-size:1.08rem;color:#2e2e2e;margin-bottom:0.4rem;">AI Prompt</label>
+        <div style="display:flex;gap:0.5rem;align-items:center;">
+            <textarea id="prompt" rows="3" 
+                      style="flex:1;width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;resize:vertical;"
+                      placeholder="Describe what kind of FAQs you want to generate (e.g., 'Create 3 FAQs about insurance services')"></textarea>
+            <button type="button" id="generateBtn" style="background:#e0eaff;color:#2e2e2e;border:none;padding:0.5rem 1.2rem;border-radius:8px;font-family:'Space Mono',monospace;font-size:1rem;font-weight:bold;letter-spacing:1px;cursor:pointer;box-shadow:0 2px 8px #b7eac540;transition:background 0.2s, color 0.2s;white-space:nowrap;">Generate with AI</button>
+        </div>
+    </div>
+
+    <!-- FAQ Items -->
+    <div id="faqItems">
+        <div class="faq-item">
+            <div class="faq-number">1</div>
+            <div style="margin-bottom:1rem;">
+                <label for="question1" style="display:block;font-family:'Space Mono',monospace;font-size:1rem;color:#2e2e2e;margin-bottom:0.4rem;">Question 1</label>
+                <input type="text" id="question1" name="questions[]" required
+                       style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;"
+                       placeholder="Enter question 1" />
+            </div>
+            <div>
+                <label for="answer1" style="display:block;font-family:'Space Mono',monospace;font-size:1rem;color:#2e2e2e;margin-bottom:0.4rem;">Answer 1</label>
+                <textarea id="answer1" name="answers[]" rows="3" required
+                          style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;resize:vertical;"
+                          placeholder="Enter answer 1"></textarea>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-number">2</div>
+            <div style="margin-bottom:1rem;">
+                <label for="question2" style="display:block;font-family:'Space Mono',monospace;font-size:1rem;color:#2e2e2e;margin-bottom:0.4rem;">Question 2</label>
+                <input type="text" id="question2" name="questions[]" required
+                       style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;"
+                       placeholder="Enter question 2" />
+            </div>
+            <div>
+                <label for="answer2" style="display:block;font-family:'Space Mono',monospace;font-size:1rem;color:#2e2e2e;margin-bottom:0.4rem;">Answer 2</label>
+                <textarea id="answer2" name="answers[]" rows="3" required
+                          style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;resize:vertical;"
+                          placeholder="Enter answer 2"></textarea>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-number">3</div>
+            <div style="margin-bottom:1rem;">
+                <label for="question3" style="display:block;font-family:'Space Mono',monospace;font-size:1rem;color:#2e2e2e;margin-bottom:0.4rem;">Question 3</label>
+                <input type="text" id="question3" name="questions[]" required
+                       style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;"
+                       placeholder="Enter question 3" />
+            </div>
+            <div>
+                <label for="answer3" style="display:block;font-family:'Space Mono',monospace;font-size:1rem;color:#2e2e2e;margin-bottom:0.4rem;">Answer 3</label>
+                <textarea id="answer3" name="answers[]" rows="3" required
+                          style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;resize:vertical;"
+                          placeholder="Enter answer 3"></textarea>
+            </div>
+        </div>
+    </div>
+ 
+    <div style="display:flex;justify-content:flex-end;gap:1rem;">
+        <button type="button" id="saveAllBtn"
+                style="background:#b7eac5;color:#2e2e2e;border:none;padding:0.7rem 1.6rem;border-radius:10px;font-family:'Space Mono',monospace;font-size:1.08rem;font-weight:bold;letter-spacing:1px;cursor:pointer;box-shadow:0 2px 8px #b7eac540;transition:background 0.2s, color 0.2s;">
+            Add FAQs
+        </button>
+    </div>
+</form>
+
+<script>
+document.getElementById('generateBtn').onclick = async function() {
+    const prompt = document.getElementById('prompt').value;
+    if (!prompt) {
+        alert('Please enter a prompt first.');
+        return;
+    }
+    
+    this.disabled = true;
+    this.innerText = "Generating...";
+    
+    try {
+        const response = await fetch('/Admin/GenerateChatGPTFAQs', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+            body: 'prompt=' + encodeURIComponent(prompt)
+        });
+        
+        const data = await response.json();
+        if (data.faqs && data.faqs.length > 0) {
+            // FAQ'ları input alanlarına yerleştir
+            for (let i = 0; i < Math.min(data.faqs.length, 3); i++) {
+                const faq = data.faqs[i];
+                document.getElementById('question' + (i + 1)).value = faq.question || '';
+                document.getElementById('answer' + (i + 1)).value = faq.answer || '';
+            }
+        } else {
+            alert('No FAQs generated.');
+        }
+    } catch (e) {
+        alert('Error generating FAQs.');
+    }
+    
+    this.disabled = false;
+    this.innerText = "Generate with AI";
+};
+
+document.getElementById('saveAllBtn').onclick = async function() {
+    const questions = [];
+    const answers = [];
+    
+    // Tüm soru ve cevapları topla
+    for (let i = 1; i <= 3; i++) {
+        const question = document.getElementById('question' + i).value.trim();
+        const answer = document.getElementById('answer' + i).value.trim();
+        
+        if (question && answer) {
+            questions.push(question);
+            answers.push(answer);
+        }
+    }
+    
+    if (questions.length === 0) {
+        alert('Please fill at least one question and answer.');
+        return;
+    }
+    
+    this.disabled = true;
+    this.innerText = "Saving...";
+    
+    try {
+        // Her FAQ için ayrı ayrı kaydet
+        for (let i = 0; i < questions.length; i++) {
+            const formData = new FormData();
+            formData.append('Question', questions[i]);
+            formData.append('Answer', answers[i]);
+            
+            await fetch('/Admin/AddFaq', {
+                method: 'POST',
+                body: formData
+            });
+        }
+        
+        alert('All FAQs saved successfully!');
+        // Admin FAQ listesine yönlendir
+        window.location.href = '/Admin/Faq';
+        
+    } catch (e) {
+        alert('Error saving FAQs.');
+    }
+    
+    this.disabled = false;
+    this.innerText = "Add FAQs";
+};
+</script>

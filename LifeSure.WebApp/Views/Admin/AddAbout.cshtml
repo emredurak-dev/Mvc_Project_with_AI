@@ -1,0 +1,61 @@
+﻿@model LifeSure.WebApp.Models.DataModels.Tbl_About
+@{
+    ViewBag.Title = "Add About";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+
+    table {
+        table-layout: fixed;
+        word-break: break-word;
+    }
+
+    td, th {
+        overflow-wrap: break-word;
+        word-break: break-word;
+        max-width: 180px;
+        white-space: normal;
+    }
+
+    .offer-link {
+        display: inline-block;
+        max-width: 160px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        vertical-align: middle;
+    }
+</style>
+
+<h2 style="font-family:'Space Mono',monospace;font-size:1.5rem;margin-bottom:1.5rem;color:#2e2e2e;">Add New About</h2>
+
+<form action="/Admin/AddAbout" method="post" style="max-width:480px;margin:0 auto;background:#f8f5e4;border:2px solid #b7eac5;border-radius:14px;padding:2rem 1.5rem;box-shadow:0 2px 8px #b7eac540;">
+    <div style="margin-bottom:1.2rem;">
+        <label for="Title" style="display:block;font-family:'Space Mono',monospace;font-size:1.08rem;color:#2e2e2e;margin-bottom:0.4rem;">Title</label>
+        <input type="text" id="Title" name="Title" value="@(Model != null ? Model.Title : "")" required
+               style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;"
+               placeholder="Enter about title" />
+    </div>
+    <div style="margin-bottom:1.2rem;">
+        <label for="Description" style="display:block;font-family:'Space Mono',monospace;font-size:1.08rem;color:#2e2e2e;margin-bottom:0.4rem;">Description</label>
+        <textarea id="Description" name="Description" rows="3" required
+                  style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;resize:vertical;"
+                  placeholder="Enter about description">@((Model != null ? Model.Description : ""))</textarea>
+    </div>
+    <div style="margin-bottom:1.2rem;">
+        <label for="ImageURL" style="display:block;font-family:'Space Mono',monospace;font-size:1.08rem;color:#2e2e2e;margin-bottom:0.4rem;">Image URL</label>
+        <input type="url" id="ImageURL" name="ImageURL" value="@(Model != null ? Model.ImageURL : "")"
+               style="width:100%;padding:0.6rem 0.8rem;border:1.5px solid #b7eac5;border-radius:8px;font-size:1rem;font-family:'Quicksand',monospace;background:#fffbe9;color:#2e2e2e;outline:none;"
+               placeholder="Enter image URL" />
+    </div>
+    <div style="display:flex;justify-content:flex-end;">
+        <button type="submit"
+                style="background:#b7eac5;color:#2e2e2e;border:none;padding:0.7rem 1.6rem;border-radius:10px;font-family:'Space Mono',monospace;font-size:1.08rem;font-weight:bold;letter-spacing:1px;cursor:pointer;box-shadow:0 2px 8px #b7eac540;transition:background 0.2s, color 0.2s;">
+            Add About
+        </button>
+    </div>
+</form>

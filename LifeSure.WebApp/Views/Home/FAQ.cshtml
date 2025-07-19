@@ -1,0 +1,58 @@
+﻿@model List<LifeSure.WebApp.Models.DataModels.Tbl_FAQ>
+
+<div class="container-fluid faq-section bg-light py-5">
+    <div class="container py-5">
+        <div class="row g-5 align-items-center">
+            <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="h-100">
+                    <div class="mb-5">
+                        <h4 class="text-primary">@Resources.SharedResource.SomeImportantFAQs</h4>
+                        <h1 class="display-4 mb-0">@Resources.SharedResource.CommonFrequentlyAskedQuestions</h1>
+                    </div>
+                    <div class="accordion" id="accordionExample">
+                        @{
+                            var index = 0;
+                        }
+                        @foreach (var item in Model)
+                        {
+                            var headingId = "heading" + index;
+                            var collapseId = "collapse" + index;
+                            var showClass = index == 0 ? "show" : "";
+                            var expanded = index == 0 ? "true" : "false";
+                            var collapsedClass = index == 0 ? "" : "collapsed";
+                            <div class="accordion-item">
+                                <h2 class="accordion-header" id="@headingId">
+                                    <button class="accordion-button border-0 @collapsedClass"
+                                            type="button"
+                                            data-bs-toggle="collapse"
+                                            data-bs-target="#@collapseId"
+                                            aria-expanded="@expanded"
+                                            aria-controls="@collapseId">
+                                        @item.Question
+                                    </button>
+                                </h2>
+                                <div id="@collapseId"
+                                     class="accordion-collapse collapse @showClass"
+                                     aria-labelledby="@headingId"
+                                     data-bs-parent="#accordionExample">
+                                    <div class="accordion-body rounded">
+                                        @item.Answer
+                                    </div>
+                                </div>
+                            </div>
+                            index++;
+                        }
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.4s">
+                <img src="https://img.freepik.com/free-vector/giant-faq-tiny-people-flat-vector-illustration-cartoon-users-asking-questions-getting-help-problem-useful-instructions-information-concept_74855-10069.jpg"
+                     class="img-fluid w-100"
+                     alt="">
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*~/LifeSure-1.0.0/img/carousel-2.png*@

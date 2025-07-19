@@ -1,0 +1,65 @@
+﻿@model List<LifeSure.WebApp.Models.DataModels.Tbl_About>
+
+<div class="container-fluid bg-light about pb-5">
+    <div class="container pb-5">
+        <div class="row g-5">
+            <div class="col-xl-6 wow fadeInLeft" data-wow-delay="0.2s">
+                <div class="about-item-content bg-white rounded p-5 h-100">
+                    @foreach (var item in Model)
+                    {
+                        <h4 class="text-primary">@Resources.SharedResource.AboutOurCompany</h4>
+                        <h1 class="display-4 mb-4">@item.Title</h1>
+                        <p>
+                            @item.Description
+                        </p>
+                    }
+                </div>
+            </div>
+            <div class="col-xl-6 wow fadeInRight" data-wow-delay="0.2s">
+                <div class="row g-4 justify-content-center">
+                    <div class="col-12">
+                        <div class="rounded bg-light">
+                            <img src="@Model.FirstOrDefault().ImageURL" class="img-fluid rounded w-100" alt="">
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="counter-item bg-light rounded p-3 h-100">
+                            <div class="counter-counting">
+                                <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">1881</span>
+                                <span class="h1 fw-bold text-primary">+</span>
+                            </div>
+                            <h4 class="mb-0 text-dark">@Resources.SharedResource.InsurancePolicies</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="counter-item bg-light rounded p-3 h-100">
+                            <div class="counter-counting">
+                                <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">1938</span>
+                                <span class="h1 fw-bold text-primary">+</span>
+                            </div>
+                            <h4 class="mb-0 text-dark">@Resources.SharedResource.AwardsWon</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="counter-item bg-light rounded p-3 h-100">
+                            <div class="counter-counting">
+                                <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">1938</span>
+                                <span class="h1 fw-bold text-primary">+</span>
+                            </div>
+                            <h4 class="mb-0 text-dark">@Resources.SharedResource.SkilledAgents</h4>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="counter-item bg-light rounded p-3 h-100">
+                            <div class="counter-counting">
+                                <span class="text-primary fs-2 fw-bold" data-toggle="counter-up">1881</span>
+                                <span class="h1 fw-bold text-primary">+</span>
+                            </div>
+                            <h4 class="mb-0 text-dark">@Resources.SharedResource.TeamMembers</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

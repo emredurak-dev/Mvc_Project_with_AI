@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.14.36109.1 d17.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeSure.WebApp", "LifeSure.WebApp\LifeSure.WebApp.csproj", "{A6B58D52-33D1-4388-94BB-3DC7EF3E2D76}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A6B58D52-33D1-4388-94BB-3DC7EF3E2D76}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A6B58D52-33D1-4388-94BB-3DC7EF3E2D76}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A6B58D52-33D1-4388-94BB-3DC7EF3E2D76}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A6B58D52-33D1-4388-94BB-3DC7EF3E2D76}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {20F5FB9A-F82A-4609-9BD7-B5B2A76299B7}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,314 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<data name="WelcomeText" xml:space="preserve">
+		<value>SafeHaven'a Hoşgeldiniz</value>
+	</data>
+	<data name="OurServices" xml:space="preserve">
+		<value>Hizmetlerimiz</value>
+	</data>
+	<data name="About" xml:space="preserve">
+		<value>Hakkımızda</value>
+	</data>
+	<data name="Contact" xml:space="preserve">
+		<value>İletişim</value>
+	</data>
+	<!-- Feature Section -->
+	<data name="WelcomeToSafeHaven" xml:space="preserve">
+		<value>SafeHaven'a Hoşgeldiniz</value>
+	</data>
+	<data name="WatchVideo" xml:space="preserve">
+		<value>Video İzle</value>
+	</data>
+	<data name="LearnMore" xml:space="preserve">
+		<value>Daha Fazla Öğren</value>
+	</data>
+	<!-- Offer Section -->
+	<data name="OurFeatures" xml:space="preserve">
+		<value>Özelliklerimiz</value>
+	</data>
+	<data name="InsuranceProvideBetterFuture" xml:space="preserve">
+		<value>Sigorta Size Daha İyi Bir Gelecek Sunar</value>
+	</data>
+	<data name="OfferDescription" xml:space="preserve">
+		<value>Sigorta hizmetlerimizi farklı kılan temel özellikleri keşfedin. Esnek planlardan güvenilir desteğe kadar, her avantaj size, güvenilirlik, güvenlik ve sevdikleriniz için daha parlak bir gelecek sağlamak üzere tasarlanmıştır.</value>
+	</data>
+	<!-- About Section -->
+	<data name="AboutOurCompany" xml:space="preserve">
+		<value>Şirketimiz Hakkında</value>
+	</data>
+	<data name="InsurancePolicies" xml:space="preserve">
+		<value>Sigorta Poliçeleri</value>
+	</data>
+	<data name="AwardsWon" xml:space="preserve">
+		<value>Kazanılan Ödüller</value>
+	</data>
+	<data name="SkilledAgents" xml:space="preserve">
+		<value>Yetenekli Acenteler</value>
+	</data>
+	<data name="TeamMembers" xml:space="preserve">
+		<value>Takım Üyeleri</value>
+	</data>
+	<!-- Service Section -->
+	<data name="WeProvideBestServices" xml:space="preserve">
+		<value>En İyi Hizmetleri Sunuyoruz</value>
+	</data>
+	<data name="ServiceDescription" xml:space="preserve">
+		<value>İhtiyaçlarınıza uygun yüksek kaliteli çözümler sunmaya kararlıyız. Yenilikçi stratejilerden güvenilir desteğe kadar, ekibimiz sunduğumuz her hizmetin işinizin büyümesine ve başarılı olmasına yardımcı olmasını sağlar.</value>
+	</data>
+	<data name="LifeInsurance" xml:space="preserve">
+		<value>Hayat Sigortası</value>
+	</data>
+	<data name="HealthInsurance" xml:space="preserve">
+		<value>Sağlık Sigortası</value>
+	</data>
+	<data name="CarInsurance" xml:space="preserve">
+		<value>Kasko Sigortası</value>
+	</data>
+	<data name="HomeInsurance" xml:space="preserve">
+		<value>Konut Sigortası</value>
+	</data>
+	<data name="ReadMore" xml:space="preserve">
+		<value>Devamını Oku</value>
+	</data>
+	<!-- FAQ Section -->
+	<data name="SomeImportantFAQs" xml:space="preserve">
+		<value>Önemli SSS'ler</value>
+	</data>
+	<data name="CommonFrequentlyAskedQuestions" xml:space="preserve">
+		<value>Sık Sorulan Sorular</value>
+	</data>
+	<data name="FAQ1Question" xml:space="preserve">
+		<value>S: Yeni başlayanlar haftasında neler oluyor?</value>
+	</data>
+	<data name="FAQ1Answer" xml:space="preserve">
+		<value>C: Üst düzey genel bakışlar için sağlam bir özet sağlamak amacıyla çevik çerçevelerden yararlanın. Kurumsal stratejiye yönelik yinelemeli yaklaşımlar, genel değer önermesini daha da ileriye taşımak için işbirlikçi düşünceyi destekler.</value>
+	</data>
+	<data name="FAQ2Question" xml:space="preserve">
+		<value>S: Transfer başvuru süreci nedir?</value>
+	</data>
+	<data name="FAQ2Answer" xml:space="preserve">
+		<value>C: Üst düzey genel bakışlar için sağlam bir özet sağlamak amacıyla çevik çerçevelerden yararlanın. Kurumsal stratejiye yönelik yinelemeli yaklaşımlar, genel değer önermesini daha da ileriye taşımak için işbirlikçi düşünceyi destekler.</value>
+	</data>
+	<data name="FAQ3Question" xml:space="preserve">
+		<value>S: Neden community college'a katılmalıyım?</value>
+	</data>
+	<data name="FAQ3Answer" xml:space="preserve">
+		<value>C: Üst düzey genel bakışlar için sağlam bir özet sağlamak amacıyla çevik çerçevelerden yararlanın. Kurumsal stratejiye yönelik yinelemeli yaklaşımlar, genel değer önermesini daha da ileriye taşımak için işbirlikçi düşünceyi destekler.</value>
+	</data>
+	<!-- Employee Section -->
+	<data name="OurTeam" xml:space="preserve">
+		<value>Ekibimiz</value>
+	</data>
+	<data name="MeetOurExpertTeamMembers" xml:space="preserve">
+		<value>Uzman Ekip Üyelerimizle Tanışın</value>
+	</data>
+	<data name="TeamDescription" xml:space="preserve">
+		<value>Hizmetlerimizin arkasındaki kendini işine adamış profesyonelleri tanıyın. Deneyimli ekibimiz size güvenilir rehberlik, esnek çözümler ve en önemli olanı korumak için ihtiyacınız olan desteği sağlamak için yorulmadan çalışır.</value>
+	</data>
+	<!-- Testimonial Section -->
+	<data name="Testimonial" xml:space="preserve">
+		<value>Referanslar</value>
+	</data>
+	<data name="WhatOurCustomersAreSaying" xml:space="preserve">
+		<value>Müşterilerimiz Ne Diyor</value>
+	</data>
+	<data name="TestimonialDescription" xml:space="preserve">
+		<value>Müşterilerimizin bizimle olan deneyimleri hakkında söyledikleri burada. Hikayeleri, güvenilir koruma, esnek planlar ve gerçekten fark yaratan olağanüstü hizmete olan bağlılığımızı vurguluyor.</value>
+	</data>
+	<!-- Contact Section -->
+	<data name="SafeHavenFooterDescription" xml:space="preserve">
+		<value>Misyonumuz sadece poliçeler değil, aynı zamanda gönül rahatlığı sunmaktır - hayat ne getirirse getirsin, sevdiklerinizin korunması sağlanır. Esnek kapsam seçeneklerinden kişiselleştirilmiş desteğe kadar, şirketimiz her adımda yanınızda durur ve korumanızın hayat yolculuğunuzla birlikte büyümesini sağlar.</value>
+	</data>
+	<data name="UsefulLinks" xml:space="preserve">
+		<value>Faydalı Bağlantılar</value>
+	</data>
+	<data name="AboutUs" xml:space="preserve">
+		<value>Hakkımızda</value>
+	</data>
+	<data name="Features" xml:space="preserve">
+		<value>Özellikler</value>
+	</data>
+	<data name="Services" xml:space="preserve">
+		<value>Hizmetler</value>
+	</data>
+	<data name="FAQs" xml:space="preserve">
+		<value>SSS</value>
+	</data>
+	<data name="Blogs" xml:space="preserve">
+		<value>Blog</value>
+	</data>
+	<data name="Instagram" xml:space="preserve">
+		<value>Instagram</value>
+	</data>
+	<data name="Address" xml:space="preserve">
+		<value>Adres</value>
+	</data>
+	<data name="MailUs" xml:space="preserve">
+		<value>Bize Yazın</value>
+	</data>
+	<data name="Telephone" xml:space="preserve">
+		<value>Telefon</value>
+	</data>
+	<data name="Newsletter" xml:space="preserve">
+		<value>Haber Bülteni</value>
+	</data>
+	<data name="NewsletterDescription" xml:space="preserve">
+		<value>En son haberler, özel teklifler ve içgörülerle güncel kalın. Şimdi abone olun ve sizin için en önemli olanı asla kaçırmayın!</value>
+	</data>
+	<data name="EnterYourEmail" xml:space="preserve">
+		<value>E-posta adresinizi girin</value>
+	</data>
+	<data name="SignUp" xml:space="preserve">
+		<value>Kayıt Ol</value>
+	</data>
+	<data name="CallToOurExperts" xml:space="preserve">
+		<value>Uzmanlarımızı Arayın</value>
+	</data>
+	<data name="Free" xml:space="preserve">
+		<value>Ücretsiz</value>
+	</data>
+	<!-- Layout Section -->
+	<data name="SiteTitle" xml:space="preserve">
+		<value>SafeHaven - Hayat Sigortası Web Sitesi Şablonu</value>
+	</data>
+	<data name="Loading" xml:space="preserve">
+		<value>Yükleniyor...</value>
+	</data>
+	<data name="Home" xml:space="preserve">
+		<value>Ana Sayfa</value>
+	</data>
+	<data name="Blog" xml:space="preserve">
+		<value>Blog</value>
+	</data>
+	<data name="Pages" xml:space="preserve">
+		<value>Sayfalar</value>
+	</data>
+	<data name="OurFeaturesNav" xml:space="preserve">
+		<value>Özelliklerimiz</value>
+	</data>
+	<data name="OurTeamNav" xml:space="preserve">
+		<value>Ekibimiz</value>
+	</data>
+	<data name="TestimonialNav" xml:space="preserve">
+		<value>Referanslar</value>
+	</data>
+	<data name="FAQsNav" xml:space="preserve">
+		<value>SSS</value>
+	</data>
+	<data name="Page404" xml:space="preserve">
+		<value>404 Sayfası</value>
+	</data>
+	<data name="AllRightsReserved" xml:space="preserve">
+		<value>Tüm hakları saklıdır.</value>
+	</data>
+	<data name="DesignedBy" xml:space="preserve">
+		<value>Tasarlayan</value>
+	</data>
+	<data name="DistributedBy" xml:space="preserve">
+		<value>Dağıtan</value>
+	</data>
+	<data name="English" xml:space="preserve">
+		<value>English</value>
+	</data>
+	<data name="Turkish" xml:space="preserve">
+		<value>Türkçe</value>
+	</data>
+</root>

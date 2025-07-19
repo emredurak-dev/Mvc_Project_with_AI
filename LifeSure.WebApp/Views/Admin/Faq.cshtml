@@ -1,0 +1,55 @@
+﻿@model List<LifeSure.WebApp.Models.DataModels.Tbl_FAQ>
+@{
+    ViewBag.Title = "Faq";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+</style>
+
+<h2 style="font-family:'Space Mono',monospace;font-size:1.5rem;margin-bottom:1.5rem;color:#2e2e2e;">FAQ List</h2>
+
+<div style="display:flex;justify-content:flex-end;align-items:center;margin-bottom:1.5rem;">
+    <a href="/Admin/AddFaq"
+       style="background:#b7eac5;color:#2e2e2e;border:none;padding:0.6rem 1.4rem;border-radius:10px;font-family:'Space Mono',monospace;font-size:1.08rem;font-weight:bold;letter-spacing:1px;text-decoration:none;box-shadow:0 2px 8px #b7eac540;transition:background 0.2s, color 0.2s;">
+        + New FAQ
+    </a>
+</div>
+
+<table style="width:100%;border-collapse:collapse;background:#f8f5e4;border-radius:12px;box-shadow:0 2px 8px #b7eac540;">
+    <thead>
+        <tr style="background:#b7eac5;color:#2e2e2e;">
+            <th style="padding:0.7rem 0.5rem;text-align:left;">#</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Question</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Answer</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Update</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="border-bottom:1px solid #b7eac5;">
+                <td style="padding:0.6rem 0.5rem;">@item.FAQId</td>
+                <td style="padding:0.6rem 0.5rem;">@item.Question</td>
+                <td style="padding:0.6rem 0.5rem;">@item.Answer</td>
+                
+                <td style="padding:0.6rem 0.5rem;">
+                    <a href="/Admin/EditFaq/@item.FAQId"
+                       style="background:#b7eac5;color:#2e2e2e;border:none;padding:0.4rem 1rem;border-radius:8px;font-family:'Space Mono',monospace;font-size:1rem;margin-right:0.5rem;cursor:pointer;text-decoration:none;transition:background 0.2s;">
+                        Update
+                    </a>
+                </td>
+                <td>
+                    <a href="/Admin/DeleteFaq/@item.FAQId"
+                       style="background:#f8f5e4;color:#b74e4e;border:1.5px solid #b74e4e;padding:0.4rem 1rem;border-radius:8px;font-family:'Space Mono',monospace;font-size:1rem;cursor:pointer;text-decoration:none;transition:background 0.2s;">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

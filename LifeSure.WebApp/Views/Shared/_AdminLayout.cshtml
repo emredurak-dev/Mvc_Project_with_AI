@@ -1,0 +1,136 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>SafeHaven. Admin Panel</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- Google Fonts: Space Mono (retro) & Quicksand (minimal) -->
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --pastel-cream: #f8f5e4;
+            --pastel-green: #b7eac5;
+            --retro-dark: #2e2e2e;
+            --retro-border: #b7eac5;
+        }
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            background: var(--pastel-cream);
+            color: var(--retro-dark);
+            font-family: 'Quicksand', 'Space Mono', monospace, Arial, sans-serif;
+        }
+        header {
+            font-family: 'Space Mono', monospace;
+            font-size: 2.2rem;
+            letter-spacing: 2px;
+            text-align: center;
+            padding: 2.2rem 0 1.2rem 0;
+            color: var(--retro-dark);
+            background: var(--pastel-cream);
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: var(--pastel-green);
+            border-top: 2px solid var(--retro-border);
+            border-bottom: 2px solid var(--retro-border);
+            padding: 0.5rem 0;
+            font-family: 'Space Mono', monospace;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: var(--retro-dark);
+            font-weight: 700;
+            margin: 0 1.1rem;
+            padding: 0.3rem 0.8rem;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            transition: background 0.2s, color 0.2s;
+        }
+        nav a:hover, nav a.active {
+            background: var(--pastel-cream);
+            color: var(--retro-dark);
+        }
+        .go-to-web {
+            border: 1.5px solid var(--retro-dark);
+            background: transparent;
+            color: var(--retro-dark);
+            border-radius: 12px;
+            margin-left: 1.5rem;
+            font-size: 1.05rem;
+            padding: 0.3rem 1.1rem;
+            font-family: 'Space Mono', monospace;
+            transition: background 0.2s, color 0.2s, border 0.2s;
+        }
+        .go-to-web:hover {
+            background: var(--retro-dark);
+            color: var(--pastel-cream);
+            border: 1.5px solid var(--pastel-green);
+        }
+        main {
+            max-width: 98vw;
+            width: 98vw;
+            margin: 2.5rem auto 2.5rem auto;
+            background: var(--pastel-cream);
+            border: 2px solid var(--pastel-green);
+            border-radius: 18px;
+            padding: 2.2rem 2vw;
+            min-height: 350px;
+            box-sizing: border-box;
+            overflow-x: auto;
+        }
+        footer {
+            background: var(--pastel-green);
+            color: var(--retro-dark);
+            text-align: center;
+            padding: 1.1rem 0 0.7rem 0;
+            font-size: 1.05rem;
+            font-family: 'Space Mono', monospace;
+            border-top: 2px solid var(--retro-border);
+            letter-spacing: 1px;
+        }
+    </style>
+    <script>
+        // Navbar aktif link için (isteğe bağlı)
+        document.addEventListener("DOMContentLoaded", function () {
+            var links = document.querySelectorAll("nav a");
+            var path = window.location.pathname.toLowerCase();
+            links.forEach(function (link) {
+                if (link.getAttribute("href") && path.includes(link.getAttribute("href").replace(".html", "").toLowerCase())) {
+                    link.classList.add("active");
+                }
+            });
+        });
+    </script>
+</head>
+<body>
+    <header>
+                        SafeHaven. Admin Panel
+    </header>
+    <nav>
+        <a href="/Admin/Dashboard">Dashboard</a>
+        <a href="/Admin/Feature">Feature</a>
+        <a href="/Admin/Offer">Offer</a>
+        <a href="/Admin/About">About</a>
+        <a href="/Admin/Service/">Service</a>
+        <a href="/Admin/FAQ/">FAQ</a>
+        <a href="/Admin/Employee/">Employee</a>
+        <a href="/Admin/Testimonial/">Testimonial</a>
+        <a href="/Admin/Contact/">Contact</a>
+        <a href="/Home/Index/" target="_blank" class="go-to-web">Go To Web</a>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        &copy; @DateTime.Now.Year Design by Ed. &mdash; All rights reserved.
+    </footer>
+</body>
+</html>

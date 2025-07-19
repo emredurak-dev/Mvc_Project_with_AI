@@ -1,0 +1,12 @@
+<div class="dropdown ms-3">
+    <a href="#" class="dropdown-toggle text-dark" data-bs-toggle="dropdown">
+        <small>
+            <i class="fas fa-globe-europe text-primary me-2"></i>
+            @(System.Threading.Thread.CurrentThread.CurrentUICulture.TwoLetterISOLanguageName == "tr" ? "Türkçe" : "English")
+        </small>
+    </a>
+    <div class="dropdown-menu rounded">
+        <a href="@Url.Action("Change", "Language", new { lang = "en", returnUrl = Request.RawUrl })" class="dropdown-item">English</a>
+        <a href="@Url.Action("Change", "Language", new { lang = "tr", returnUrl = Request.RawUrl })" class="dropdown-item">Türkçe</a>
+    </div>
+</div> 

@@ -1,0 +1,87 @@
+﻿@model List<LifeSure.WebApp.Models.DataModels.Tbl_Feature>
+@{
+    ViewBag.Title = "Feature";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+    }
+</style>
+
+<h2 style="font-family:'Space Mono',monospace;font-size:1.5rem;margin-bottom:1.5rem;color:#2e2e2e;">Feature List</h2>
+
+<div style="display:flex;justify-content:flex-end;align-items:center;margin-bottom:1.5rem;">
+    <a href="/Admin/AddFeature"
+       style="background:#b7eac5;color:#2e2e2e;border:none;padding:0.6rem 1.4rem;border-radius:10px;font-family:'Space Mono',monospace;font-size:1.08rem;font-weight:bold;letter-spacing:1px;text-decoration:none;box-shadow:0 2px 8px #b7eac540;transition:background 0.2s, color 0.2s;">
+        + New Feature
+    </a>
+</div>
+
+<table style="width:100%;border-collapse:collapse;background:#f8f5e4;border-radius:12px;box-shadow:0 2px 8px #b7eac540;">
+    <thead>
+        <tr style="background:#b7eac5;color:#2e2e2e;">
+            <th style="padding:0.7rem 0.5rem;text-align:left;">#</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Title</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Description</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Video</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Image</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Update</th>
+            <th style="padding:0.7rem 0.5rem;text-align:left;">Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr style="border-bottom:1px solid #b7eac5;">
+                <td style="padding:0.6rem 0.5rem;">@item.FeatureId</td>
+                <td style="padding:0.6rem 0.5rem;">@item.Title</td>
+                <td style="padding:0.6rem 0.5rem;">@item.Description</td>
+                <td style="padding:0.6rem 0.5rem;">
+                    @if (!string.IsNullOrEmpty(item.VideoURL))
+                    {
+                        // mp4
+                        if (item.VideoURL.EndsWith(".mp4"))
+                        {
+                            <video width="120" height="80" controls style="border-radius:8px;box-shadow:0 1px 4px #b7eac540;">
+                                <source src="@item.VideoURL" type="video/mp4" />
+                                Your browser does not support the video tag.
+                            </video>
+                        }
+                        // youtube
+                        else if (item.VideoURL.Contains("youtube.com") || item.VideoURL.Contains("youtu.be"))
+                        {
+                            var youtubeId = item.VideoURL.Contains("youtu.be")
+                                ? item.VideoURL.Split('/').Last()
+                                : System.Web.HttpUtility.ParseQueryString(new Uri(item.VideoURL).Query).Get("v");
+                            <iframe width="120" height="80" src="https://www.youtube.com/embed/@youtubeId" frameborder="0" allowfullscreen style="border-radius:8px;box-shadow:0 1px 4px #b7eac540;"></iframe>
+                        }
+                        else
+                        {
+                            <a href="@item.VideoURL" target="_blank" style="color:#2e2e2e;text-decoration:underline;">Open</a>
+                        }
+                    }
+                </td>
+                <td style="padding:0.6rem 0.5rem;">
+                    @if (!string.IsNullOrEmpty(item.ImageURL))
+                    {
+                        <img src="@item.ImageURL" alt="employee image" style="max-width:80px;max-height:60px;border-radius:6px;box-shadow:0 1px 4px #b7eac540;" />
+                    }
+                </td>
+                <td style="padding:0.6rem 0.5rem;">
+                    <a href="/Admin/EditFeature/@item.FeatureId"
+                       style="background:#b7eac5;color:#2e2e2e;border:none;padding:0.4rem 1rem;border-radius:8px;font-family:'Space Mono',monospace;font-size:1rem;margin-right:0.5rem;cursor:pointer;text-decoration:none;transition:background 0.2s;">
+                        Update
+                    </a>
+                </td>
+                <td>
+                    <a href="/Admin/DeleteFeature/@item.FeatureId"
+                       style="background:#f8f5e4;color:#b74e4e;border:1.5px solid #b74e4e;padding:0.4rem 1rem;border-radius:8px;font-family:'Space Mono',monospace;font-size:1rem;cursor:pointer;text-decoration:none;transition:background 0.2s;">
+                        Delete
+                    </a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
