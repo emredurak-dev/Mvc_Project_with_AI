@@ -143,8 +143,118 @@ LifeSure_Mvc_Project/
     - `YOUR-RAPIDAPI-KEY` for LinkedIn integration
 
 ## 📸 Screenshots
+# Admin Panels & Features
 
-[Add your screenshots here]
+<details>
+<summary>▶️ Admin / Feature</summary>
+
+![1](https://github.com/user-attachments/assets/280f42e7-5874-4457-849f-a84aa86e7c34)  
+![2](https://github.com/user-attachments/assets/86ea619c-3b8c-4efe-a2dd-1796343ce0b2)  
+![3](https://github.com/user-attachments/assets/d81efd59-7a77-4003-93fe-1f07ecb5d2d6)  
+
+</details>
+
+<details>
+<summary>▶️ Admin / Offer</summary>
+
+![1](https://github.com/user-attachments/assets/fd7e76f4-701a-41e6-80b7-7707ce5614c4)  
+![2](https://github.com/user-attachments/assets/967a1101-261b-4b84-b684-01e6e5101264)  
+![3](https://github.com/user-attachments/assets/e16b8936-55ea-4cbe-9c4f-af6a99fdfc17)  
+
+</details>
+
+<details>
+<summary>▶️ Admin / About</summary>
+
+![1](https://github.com/user-attachments/assets/ee280a15-dad2-4927-bd83-dbff5c472039)  
+![2](https://github.com/user-attachments/assets/9e3f90ce-c51f-4810-98bb-0253ec2c9334)  
+![3](https://github.com/user-attachments/assets/43bbaec0-80f9-4159-aff1-1bbd35896303)  
+
+</details>
+
+<details>
+<summary>▶️ Admin / Service</summary>
+
+![1](https://github.com/user-attachments/assets/0e753cbb-8759-435b-a2da-6d38657280e7)  
+![2](https://github.com/user-attachments/assets/f64feaa6-fdbf-4868-935f-d2839d50c316)  
+![3](https://github.com/user-attachments/assets/8e6e5427-c10d-46ac-8aa1-2cc0fa599c76)  
+
+</details>
+
+<details>
+<summary>▶️ Admin / FAQs</summary>
+
+![1](https://github.com/user-attachments/assets/8ff4d883-bb96-4fa7-b0e7-77ada05e3a0d)  
+![Add FAQ](https://github.com/user-attachments/assets/ccddecbd-3d7e-4647-8640-2b5363c0f775)  
+![Add FAQ 2](https://github.com/user-attachments/assets/53ac4f10-e248-4f4f-be7d-ffa56e7f366e)  
+![Add FAQ 3](https://github.com/user-attachments/assets/124c5013-dea7-460c-977f-73286e42f3f7)  
+![Add FAQ 4](https://github.com/user-attachments/assets/fece44b9-94b7-41ba-a970-18f0a4442def)  
+![Edit FAQ](https://github.com/user-attachments/assets/15f550ca-8c36-4ed5-af39-c07839f2f93b)  
+
+</details>
+
+<details>
+<summary>▶️ Admin / Employee</summary>
+
+![1](https://github.com/user-attachments/assets/9cb5fb33-0504-4f51-95e5-9cff24493f9e)  
+![2](https://github.com/user-attachments/assets/ff6aa1b6-4f10-49dd-8401-f216c5501682)  
+![3](https://github.com/user-attachments/assets/681ab968-0d95-4c5c-8296-00baf7eca36a)  
+
+</details>
+
+<details>
+<summary>▶️ Admin / Testimonial</summary>
+
+![1](https://github.com/user-attachments/assets/16d9f644-8822-483b-9fd1-3c30a6b14e3b)  
+![2](https://github.com/user-attachments/assets/6ff16dc9-4cba-47ce-810b-8e7b59665791)  
+![3](https://github.com/user-attachments/assets/5d80e6a2-347f-42e5-8099-334a3cd88600)  
+
+</details>
+
+<details>
+<summary>▶️ Admin / Contact</summary>
+
+![1](https://github.com/user-attachments/assets/8f1e0d0e-311b-4bb7-bd1c-0c1317e46a01)  
+![2](https://github.com/user-attachments/assets/7b4a562d-f450-4f43-8d1b-ddb029145733)  
+![3](https://github.com/user-attachments/assets/605080f2-a9b0-4fc7-b708-37f06734a467)  
+
+</details>
+
+<details>
+<summary>▶️ Home / Index</summary>
+
+![Home](https://github.com/user-attachments/assets/419fb215-d5a7-4413-8c8c-4a505a35b803)
+
+</details>
+
+<details>
+<summary>▶️ English</summary>
+
+![English](https://github.com/user-attachments/assets/b9fa6f62-4999-404a-bc0f-d9024e510ddd)
+
+</details>
+
+<details>
+<summary>▶️ Turkish</summary>
+
+![Turkish](https://github.com/user-attachments/assets/191f3dc3-09f2-46e8-8142-42a749b32ea1)
+
+</details>
+
+<details>
+<summary>▶️ LinkedIn & Twitter Followers</summary>
+
+*(via RapidAPI)*  
+✅ **@muratyucedag currently has the following followers count:**
+
+- **LinkedIn:** (fetched dynamically)  
+- **Twitter:** (fetched dynamically)
+
+> _This section displays the live follower count for @muratyucedag, retrieved through the RapidAPI integration._
+
+![Followers](https://github.com/user-attachments/assets/61a0c9c2-3e3d-4a00-aa2b-dc8bd130d58d)
+
+</details>
 
 ### Public Website
 - Home page with dynamic content
@@ -211,30 +321,3 @@ Language switching is handled by `LanguageController.cs`.
 - User-friendly error messages
 - Debug logging for development
 - Graceful degradation for external services
-
-## 🔄 Future Enhancements
-
-- Additional AI integrations
-- Enhanced social media features
-- Advanced analytics
-- Mobile app development
-- Additional language support
-
-## 📝 License
-
-This project is proprietary software developed for LifeSure Insurance Company.
-
-## 👥 Contributing
-
-This is a private project. For questions or support, please contact the development team.
-
-## 📞 Support
-
-For technical support or questions about the project, please refer to the development documentation or contact the project maintainers.
-
----
-
-**Last Updated**: December 2024
-**Version**: 1.0.0
-**Framework**: ASP.NET MVC 5
-**Database**: SQL Server with Entity Framework 6 
